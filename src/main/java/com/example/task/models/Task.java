@@ -2,11 +2,10 @@ package com.example.task.models;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 @Entity
 public class Task {
-    @jakarta.persistence.Id
     @Id
     @GeneratedValue
     private long id;
@@ -21,7 +20,6 @@ public class Task {
         this.description = description;
         this.isCompleted = isCompleted;
     }
-
 
     public String getTitle() {
         return title;
